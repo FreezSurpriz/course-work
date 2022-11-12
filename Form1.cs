@@ -164,12 +164,12 @@ namespace Cursash2
 
                     //MessageBox.Show(resp["offers_requests_info"].ToString());
                     //MessageBox.Show(resp["offers_requests_info"][c].ToString());
-                    if ((numbers[2].ToString() != "") && (numbers[3].ToString() != "") && (numbers[4].ToString() != ""))
-                    {
-                        MessageBox.Show(numbers[2].ToString());
+             //       if ((numbers[2].ToString() != "") && (numbers[3].ToString() != "") && (numbers[4].ToString() != ""))
+               //     {
+                        //MessageBox.Show(numbers[2].ToString());
                         ls.Add(new double[] { un, Convert.ToDouble(numbers[2].ToString()), Convert.ToDouble(numbers[3].ToString()), Convert.ToDouble(numbers[4].ToString()) });
                         l.Items.Add("Сер:" + numbers[2].ToString() + " Мин:" + numbers[3].ToString() + " Макс:" + numbers[4].ToString());
-                    }
+                 //   }
 
                 }
             else
@@ -183,13 +183,13 @@ namespace Cursash2
                     {
 
                         var numbers = respi[i]["st"]["c"];
-                        if ((numbers["rm"].ToString() != "") && (numbers["obm"].ToString() != "") && (numbers["ocm"].ToString() != ""))
-                        {
-                            MessageBox.Show(numbers["rm"].ToString());
+                     //   if ((numbers["rm"].ToString() != "") && (numbers["obm"].ToString() != "") && (numbers["ocm"].ToString() != ""))
+                       // {
+                            //MessageBox.Show(numbers["rm"].ToString());
                             ls.Add(new double[] { un, Convert.ToDouble(numbers["rm"].ToString()), Convert.ToDouble(numbers["obm"].ToString()), Convert.ToDouble(numbers["ocm"].ToString()) });
                             l.Items.Add("Сер:" + numbers["rm"].ToString() + " Мин:" + numbers["obm"].ToString() + " Макс:" + numbers["ocm"].ToString());
 
-                        }
+//                        }
                     }
 
                 }
@@ -200,10 +200,8 @@ namespace Cursash2
         {
             ls = new List<double[]>();
             res2 =null; res1 =null;
-            
             string year = comboBox2.SelectedItem.ToString();
             string spec = comboBox1.SelectedItem.ToString();
-            spec = spec.Split('-')[0].Trim();
             int qua = comboBox3.SelectedIndex;
             int qualification = 0;
             int[] bases = { 40, 320, 520 };
@@ -270,7 +268,6 @@ namespace Cursash2
                 writein(code1, res1);
                 writein(code2, res2);
             }
-            MessageBox.Show(code1.ToString());
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -402,7 +399,6 @@ namespace Cursash2
             {
                 string year = comboBox2.SelectedItem.ToString();
                 string spec = comboBox1.SelectedItem.ToString();
-                spec = spec.Split('-')[0].Trim();
                 int qua = comboBox3.SelectedIndex;
                 int qualification = 0;
                 int[] bases = { 40, 320, 520 };

@@ -154,22 +154,19 @@ namespace Cursash2
             //MessageBox.Show(result);
             var resp = JsonConvert.DeserializeObject<JToken>(result);
             //MessageBox.Show(resp["offers_requests_info"].ToString());
-            if (year != "2021" && resp!=null)
+            if (year != "2021")
                 foreach (string c in codes)
                 {
                     //MessageBox.Show(resp["offers_requests_info"].ToString());
                     var numbers = resp["offers_requests_info"][c];
-
-                    MessageBox.Show(resp["offers_requests_info"].ToString());
-
                     //MessageBox.Show(resp["offers_requests_info"].ToString());
                     //MessageBox.Show(resp["offers_requests_info"][c].ToString());
-             //       if ((numbers[2].ToString() != "") && (numbers[3].ToString() != "") && (numbers[4].ToString() != ""))
-               //     {
+                    if ((numbers[2].ToString() != "") && (numbers[3].ToString() != "") && (numbers[4].ToString() != ""))
+                    {
                         //MessageBox.Show(numbers[2].ToString());
                         ls.Add(new double[] { un, Convert.ToDouble(numbers[2].ToString()), Convert.ToDouble(numbers[3].ToString()), Convert.ToDouble(numbers[4].ToString()) });
-                        l.Items.Add("Сер:" + numbers[2].ToString() + " Мин:" + numbers[3].ToString() + " Макс:" + numbers[4].ToString());
-                 //   }
+                        l.Items.Add("Сер:" + numbers[2].ToString() + " Мін:" + numbers[3].ToString() + " Макс:" + numbers[4].ToString());
+                    }
 
                 }
             else
@@ -183,13 +180,13 @@ namespace Cursash2
                     {
 
                         var numbers = respi[i]["st"]["c"];
-                     //   if ((numbers["rm"].ToString() != "") && (numbers["obm"].ToString() != "") && (numbers["ocm"].ToString() != ""))
-                       // {
+                        if ((numbers["rm"].ToString() != "") && (numbers["obm"].ToString() != "") && (numbers["ocm"].ToString() != ""))
+                        {
                             //MessageBox.Show(numbers["rm"].ToString());
                             ls.Add(new double[] { un, Convert.ToDouble(numbers["rm"].ToString()), Convert.ToDouble(numbers["obm"].ToString()), Convert.ToDouble(numbers["ocm"].ToString()) });
-                            l.Items.Add("Сер:" + numbers["rm"].ToString() + " Мин:" + numbers["obm"].ToString() + " Макс:" + numbers["ocm"].ToString());
+                            l.Items.Add("Сер:" + numbers["rm"].ToString() + " Мін:" + numbers["obm"].ToString() + " Макс:" + numbers["ocm"].ToString());
 
-//                        }
+                        }
                     }
 
                 }
@@ -202,16 +199,17 @@ namespace Cursash2
             res2 =null; res1 =null;
             string year = comboBox2.SelectedItem.ToString();
             string spec = comboBox1.SelectedItem.ToString();
-            int qua = comboBox3.SelectedIndex;
-            int qualification = 0;
+            spec = spec.Split(' ')[0];
+            //int qua = comboBox3.SelectedIndex;
+            int qualification = 1;
             int[] bases = { 40, 320, 520 };
-            switch (qua)
-            {
-                case (0): qualification = 1; bases = new int[] { 40, 320, 520 }; break;
-                case (1): qualification = 2; bases = new int[] { 40, 320, 520, 640 }; break;
-                case (2): qualification = 6; bases = new int[] { 40, 320 }; break;
-                case (3): qualification = 9; bases = new int[] { 30, 40, 510, 520 }; break;
-            }
+            //switch (qua)
+            //{
+            //    case (0): qualification = 1; bases = new int[] { 40, 320, 520 }; break;
+            //    case (1): qualification = 2; bases = new int[] { 40, 320, 520, 640 }; break;
+            //    case (2): qualification = 6; bases = new int[] { 40, 320 }; break;
+            //    case (3): qualification = 9; bases = new int[] { 30, 40, 510, 520 }; break;
+            //}
             listBox1.Items.Clear();
             listBox2.Items.Clear();
             string code1 = "73" + year + spec + qualification;
@@ -241,7 +239,7 @@ namespace Cursash2
 
                 writeout(year, spec, 91, qualification, bas, 7, 13, listBox2);
             }
-            //MessageBox.Show(ls.ToString());
+            MessageBox.Show(ls.ToString().Length.ToString(),"Кількість пропозицій");
             double count1 = 0; double count2 = 0; double s1 = 0; double s2 = 0; double min1 = 0; double min2 = 0; double max1 = 0; double max2 = 0;
             foreach (double[] arr in ls)
             {
@@ -268,6 +266,11 @@ namespace Cursash2
                 writein(code1, res1);
                 writein(code2, res2);
             }
+            else
+            {
+                MessageBox.Show("Сер:" + res1[0].ToString() + "Мін:" + res1[1].ToString() + "Макс:" + res1[2].ToString(), "ЗНУ");
+                MessageBox.Show("Сер:" + res2[0].ToString() + "Мін:" + res2[1].ToString() + "Макс:" + res2[2].ToString(), "ЗПУ");
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -289,133 +292,26 @@ namespace Cursash2
             }
         }
         
-        private void button3_Click(object sender, EventArgs e)
-        {
-            
 
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-            
-        }
-
-        private void button3_Click_1(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button4_Click_1(object sender, EventArgs e)
-        {
-            
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
-            // MessageBox.Show("Сер:" + res1[0].ToString()+ "Мін:" + res1[1].ToString() + "Макс:" + res1[2].ToString(),"ЗНУ");
-            //MessageBox.Show("Сер:" + res2[0].ToString() + "Мін:" + res2[1].ToString() + "Макс:" + res2[2].ToString(), "ЗПУ");
-            chart1.Series["Зну"].Points[0].YValues[0]= res1[0];
-            chart1.Series["Зну"].Points[0].Label = res1[0].ToString();
-            chart1.Series["Зну"].Points[1].YValues[0] = res1[1];
-            chart1.Series["Зну"].Points[2].YValues[0] = res1[2];
-            chart1.Series["Зпу"].Points[0].YValues[0] = res2[0];
-            chart1.Series["Зпу"].Points[1].YValues[0] = res2[1];
-            chart1.Series["Зпу"].Points[2].YValues[0] = res2[2];
-            chart1.Series["Зну"].Points[1].Label = res1[1].ToString();
-            chart1.Series["Зну"].Points[2].Label = res1[2].ToString();
-            chart1.Series["Зпу"].Points[0].Label = res2[0].ToString();
-            chart1.Series["Зпу"].Points[1].Label = res2[1].ToString();
-            chart1.Series["Зпу"].Points[2].Label = res2[2].ToString();
+            chart1.Series["ЗНУ"].Points[0].YValues[0] = res1[0];
+            chart1.Series["ЗНУ"].Points[0].Label = res1[0].ToString();
+            chart1.Series["ЗНУ"].Points[1].YValues[0] = res1[1];
+            chart1.Series["ЗНУ"].Points[2].YValues[0] = res1[2];
+            chart1.Series["ЗПУ"].Points[0].YValues[0] = res2[0];
+            chart1.Series["ЗПУ"].Points[1].YValues[0] = res2[1];
+            chart1.Series["ЗПУ"].Points[2].YValues[0] = res2[2];
+            chart1.Series["ЗНУ"].Points[1].Label = res1[1].ToString();
+            chart1.Series["ЗНУ"].Points[2].Label = res1[2].ToString();
+            chart1.Series["ЗПУ"].Points[0].Label = res2[0].ToString();
+            chart1.Series["ЗПУ"].Points[1].Label = res2[1].ToString();
+            chart1.Series["ЗПУ"].Points[2].Label = res2[2].ToString();
             chart1.ResetAutoValues();
-            
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            using (StreamReader r = new StreamReader("user.json"))
-            {
-                string json = r.ReadToEnd();
-                List<Result> items = JsonConvert.DeserializeObject<List<Result>>(json);
-                string year = comboBox2.SelectedItem.ToString();
-                string spec = comboBox1.SelectedItem.ToString();
-                int qua = comboBox3.SelectedIndex;
-                int qualification = 0;
-                int[] bases = { 40, 320, 520 };
-                switch (qua)
-                {
-                    case (0): qualification = 1; bases = new int[] { 40, 320, 520 }; break;
-                    case (1): qualification = 2; bases = new int[] { 40, 320, 520, 640 }; break;
-                    case (2): qualification = 6; bases = new int[] { 40, 320 }; break;
-                    case (3): qualification = 9; bases = new int[] { 30, 40, 510, 520 }; break;
-                }
-                string code = "73"+year+spec+qualification;
-                foreach(Result res in items)
-                {
-                    if (res.code == code)
-                    {
-                        MessageBox.Show("Сер:" + Math.Round(res.nums[0], 2).ToString() + "Мін:" + Math.Round(res.nums[0], 2).ToString() + "Макс:" + Math.Round(res.nums[0], 2).ToString(), "ЗПУ");
-                        break;
-                    }
-                }
-            }
-        }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-            List<Result> its = new List<Result>();
-            using (StreamReader r = new StreamReader("user.json"))
-            {
-                string json = r.ReadToEnd();
-                List<Result> items = JsonConvert.DeserializeObject<List<Result>>(json);
-                string year = comboBox2.SelectedItem.ToString();
-                string spec = comboBox1.SelectedItem.ToString();
-                int qua = comboBox3.SelectedIndex;
-                int qualification = 0;
-                int[] bases = { 40, 320, 520 };
-                switch (qua)
-                {
-                    case (0): qualification = 1; bases = new int[] { 40, 320, 520 }; break;
-                    case (1): qualification = 2; bases = new int[] { 40, 320, 520, 640 }; break;
-                    case (2): qualification = 6; bases = new int[] { 40, 320 }; break;
-                    case (3): qualification = 9; bases = new int[] { 30, 40, 510, 520 }; break;
-                }
-                string code = "73" + year + spec + qualification;
-                Result res = new Result(code,new double[] {156,127,178 });
-                items.Add(res);
-                its = items;
-            }
-            using (FileStream fs = new FileStream("user.json", FileMode.OpenOrCreate))
-            {
-                System.Text.Json.JsonSerializer.SerializeAsync<List<Result>>(fs, its);
-            }
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            using (FileStream fs = new FileStream("user.json", FileMode.OpenOrCreate))
-            {
-                string year = comboBox2.SelectedItem.ToString();
-                string spec = comboBox1.SelectedItem.ToString();
-                int qua = comboBox3.SelectedIndex;
-                int qualification = 0;
-                int[] bases = { 40, 320, 520 };
-                switch (qua)
-                {
-                    case (0): qualification = 1; bases = new int[] { 40, 320, 520 }; break;
-                    case (1): qualification = 2; bases = new int[] { 40, 320, 520, 640 }; break;
-                    case (2): qualification = 6; bases = new int[] { 40, 320 }; break;
-                    case (3): qualification = 9; bases = new int[] { 30, 40, 510, 520 }; break;
-                }
-                string code = "73" + year + spec + qualification;
-                Result res = new Result(code, new double[] { 156, 127, 178 });
-                List<Result> its = new List<Result>();
-                its.Add(res);
-                System.Text.Json.JsonSerializer.SerializeAsync<List<Result>>(fs, its);
-            }
-        }
         public double[] search(string code)
         {
             using (StreamReader r = new StreamReader("user.json"))
@@ -447,11 +343,6 @@ namespace Cursash2
             {
                 System.Text.Json.JsonSerializer.SerializeAsync<List<Result>>(fs, its);
             }
-        }
-
-        private void chart1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 

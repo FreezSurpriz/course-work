@@ -91,3 +91,66 @@ C:\Универ\Cursash2 — копия\obj\Debug\Cursash2.csproj.CoreCompileInp
 C:\Универ\Cursash2 — копия\obj\Debug\Cursash2.csproj.CopyComplete
 C:\Универ\Cursash2 — копия\obj\Debug\Cursash2.exe
 C:\Универ\Cursash2 — копия\obj\Debug\Cursash2.pdb
+C:\Универ\Курсач\Cursash2 — копия\bin\Debug\Cursash2.exe.config
+C:\Универ\Курсач\Cursash2 — копия\bin\Debug\Cursash2.exe
+C:\Универ\Курсач\Cursash2 — копия\bin\Debug\Cursash2.pdb
+C:\Универ\Курсач\Cursash2 — копия\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Универ\Курсач\Cursash2 — копия\bin\Debug\Newtonsoft.Json.dll
+C:\Универ\Курсач\Cursash2 — копия\bin\Debug\System.Buffers.dll
+C:\Универ\Курсач\Cursash2 — копия\bin\Debug\System.Memory.dll
+C:\Универ\Курсач\Cursash2 — копия\bin\Debug\System.Numerics.Vectors.dll
+C:\Универ\Курсач\Cursash2 — копия\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Универ\Курсач\Cursash2 — копия\bin\Debug\System.Text.Encodings.Web.dll
+C:\Универ\Курсач\Cursash2 — копия\bin\Debug\System.Text.Json.dll
+C:\Универ\Курсач\Cursash2 — копия\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Универ\Курсач\Cursash2 — копия\bin\Debug\System.ValueTuple.dll
+C:\Универ\Курсач\Cursash2 — копия\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Универ\Курсач\Cursash2 — копия\bin\Debug\Newtonsoft.Json.xml
+C:\Универ\Курсач\Cursash2 — копия\bin\Debug\System.Buffers.xml
+C:\Универ\Курсач\Cursash2 — копия\bin\Debug\System.Memory.xml
+C:\Универ\Курсач\Cursash2 — копия\bin\Debug\System.Numerics.Vectors.xml
+C:\Универ\Курсач\Cursash2 — копия\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Универ\Курсач\Cursash2 — копия\bin\Debug\System.Text.Encodings.Web.xml
+C:\Универ\Курсач\Cursash2 — копия\bin\Debug\System.Text.Json.xml
+C:\Универ\Курсач\Cursash2 — копия\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Универ\Курсач\Cursash2 — копия\bin\Debug\System.ValueTuple.xml
+C:\Универ\Курсач\Cursash2 — копия\obj\Debug\Cursash2.csprojAssemblyReference.cache
+C:\Универ\Курсач\Cursash2 — копия\obj\Debug\Cursash2.Form1.resources
+C:\Универ\Курсач\Cursash2 — копия\obj\Debug\Cursash2.Properties.Resources.resources
+C:\Универ\Курсач\Cursash2 — копия\obj\Debug\Cursash2.csproj.GenerateResource.cache
+C:\Универ\Курсач\Cursash2 — копия\obj\Debug\Cursash2.csproj.CoreCompileInputs.cache
+C:\Универ\Курсач\Cursash2 — копия\obj\Debug\Cursash2.csproj.CopyComplete
+C:\Универ\Курсач\Cursash2 — копия\obj\Debug\Cursash2.exe
+C:\Универ\Курсач\Cursash2 — копия\obj\Debug\Cursash2.pdb
+C:\Users\merlo\Desktop\Курсач 3\bin\Debug\Cursash2.exe.config
+C:\Users\merlo\Desktop\Курсач 3\bin\Debug\Cursash2.exe
+C:\Users\merlo\Desktop\Курсач 3\bin\Debug\Cursash2.pdb
+C:\Users\merlo\Desktop\Курсач 3\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\merlo\Desktop\Курсач 3\bin\Debug\Newtonsoft.Json.dll
+C:\Users\merlo\Desktop\Курсач 3\bin\Debug\System.Buffers.dll
+C:\Users\merlo\Desktop\Курсач 3\bin\Debug\System.Memory.dll
+C:\Users\merlo\Desktop\Курсач 3\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\merlo\Desktop\Курсач 3\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\merlo\Desktop\Курсач 3\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\merlo\Desktop\Курсач 3\bin\Debug\System.Text.Json.dll
+C:\Users\merlo\Desktop\Курсач 3\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\merlo\Desktop\Курсач 3\bin\Debug\System.ValueTuple.dll
+C:\Users\merlo\Desktop\Курсач 3\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\merlo\Desktop\Курсач 3\bin\Debug\Newtonsoft.Json.xml
+C:\Users\merlo\Desktop\Курсач 3\bin\Debug\System.Buffers.xml
+C:\Users\merlo\Desktop\Курсач 3\bin\Debug\System.Memory.xml
+C:\Users\merlo\Desktop\Курсач 3\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\merlo\Desktop\Курсач 3\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\merlo\Desktop\Курсач 3\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\merlo\Desktop\Курсач 3\bin\Debug\System.Text.Json.xml
+C:\Users\merlo\Desktop\Курсач 3\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\merlo\Desktop\Курсач 3\bin\Debug\System.ValueTuple.xml
+C:\Users\merlo\Desktop\Курсач 3\obj\Debug\Cursash2.csproj.AssemblyReference.cache
+C:\Users\merlo\Desktop\Курсач 3\obj\Debug\Cursash2.csproj.SuggestedBindingRedirects.cache
+C:\Users\merlo\Desktop\Курсач 3\obj\Debug\Cursash2.Form1.resources
+C:\Users\merlo\Desktop\Курсач 3\obj\Debug\Cursash2.Properties.Resources.resources
+C:\Users\merlo\Desktop\Курсач 3\obj\Debug\Cursash2.csproj.GenerateResource.cache
+C:\Users\merlo\Desktop\Курсач 3\obj\Debug\Cursash2.csproj.CoreCompileInputs.cache
+C:\Users\merlo\Desktop\Курсач 3\obj\Debug\Cursash2.csproj.CopyComplete
+C:\Users\merlo\Desktop\Курсач 3\obj\Debug\Cursash2.exe
+C:\Users\merlo\Desktop\Курсач 3\obj\Debug\Cursash2.pdb

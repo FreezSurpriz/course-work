@@ -239,7 +239,7 @@ namespace Cursash2
 
                 writeout(year, spec, 91, qualification, bas, 7, 13, listBox2);
             }
-            MessageBox.Show(ls.ToString().Length.ToString(),"Кількість пропозицій");
+            MessageBox.Show(ls.Count.Length.ToString(),"Кількість пропозицій");
             double count1 = 0; double count2 = 0; double s1 = 0; double s2 = 0; double min1 = 0; double min2 = 0; double max1 = 0; double max2 = 0;
             foreach (double[] arr in ls)
             {
@@ -259,17 +259,17 @@ namespace Cursash2
                 }
             }
 
-            if (res1 == null && res2==null)
+            if (res1 == null || res2==null)
             {
                 res1 = new double[] { Math.Round(s1 / count1, 2), Math.Round(min1 / count1, 2), Math.Round(max1 / count1, 2) };
                 res2 = new double[] { Math.Round(s2 / count2, 2), Math.Round(min2 / count2, 2), Math.Round(max2 / count2, 2) };
-                writein(code1, res1);
-                writein(code2, res2);
+                writein(code1, res1,code2,res2);
+                //writein(code2, res2);
             }
             else
             {
-                MessageBox.Show("Сер:" + res1[0].ToString() + "Мін:" + res1[1].ToString() + "Макс:" + res1[2].ToString(), "ЗНУ");
-                MessageBox.Show("Сер:" + res2[0].ToString() + "Мін:" + res2[1].ToString() + "Макс:" + res2[2].ToString(), "ЗПУ");
+                listBox1.Items.Add("Сер:" + res1[0].ToString() + "Мін:" + res1[1].ToString() + "Макс:" + res1[2].ToString());
+                listBox2.Items.Add("Сер:" + res2[0].ToString() + "Мін:" + res2[1].ToString() + "Макс:" + res2[2].ToString());
             }
         }
 
@@ -328,7 +328,7 @@ namespace Cursash2
             }
             return new double[1];
         } 
-        public void writein(string code,double[] reses)
+        public void writein(string code,double[] reses,string code2,double[] reses2)
         {
             List<Result> its = new List<Result>();
             using (StreamReader r = new StreamReader("user.json"))
@@ -336,7 +336,9 @@ namespace Cursash2
                 string json = r.ReadToEnd();
                 List<Result> items = JsonConvert.DeserializeObject<List<Result>>(json);
                 Result res = new Result(code, reses);
+                Result res2 = new Result(code2, reses2);
                 items.Add(res);
+                items.Add(res2);
                 its = items;
             }
             using (FileStream fs = new FileStream("user.json", FileMode.OpenOrCreate))

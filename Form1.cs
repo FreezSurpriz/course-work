@@ -239,7 +239,7 @@ namespace Cursash2
 
                 writeout(year, spec, 91, qualification, bas, 7, 13, listBox2);
             }
-            MessageBox.Show(ls.Count.Length.ToString(),"Кількість пропозицій");
+            //MessageBox.Show(ls.Count.Length.ToString(),"Кількість пропозицій");
             double count1 = 0; double count2 = 0; double s1 = 0; double s2 = 0; double min1 = 0; double min2 = 0; double max1 = 0; double max2 = 0;
             foreach (double[] arr in ls)
             {
@@ -300,14 +300,14 @@ namespace Cursash2
             chart1.Series["ЗНУ"].Points[0].Label = res1[0].ToString();
             chart1.Series["ЗНУ"].Points[1].YValues[0] = res1[1];
             chart1.Series["ЗНУ"].Points[2].YValues[0] = res1[2];
-            chart1.Series["ЗПУ"].Points[0].YValues[0] = res2[0];
-            chart1.Series["ЗПУ"].Points[1].YValues[0] = res2[1];
-            chart1.Series["ЗПУ"].Points[2].YValues[0] = res2[2];
+            chart1.Series["НУ Запорізька політехніка"].Points[0].YValues[0] = res2[0];
+            chart1.Series["НУ Запорізька політехніка"].Points[1].YValues[0] = res2[1];
+            chart1.Series["НУ Запорізька політехніка"].Points[2].YValues[0] = res2[2];
             chart1.Series["ЗНУ"].Points[1].Label = res1[1].ToString();
             chart1.Series["ЗНУ"].Points[2].Label = res1[2].ToString();
-            chart1.Series["ЗПУ"].Points[0].Label = res2[0].ToString();
-            chart1.Series["ЗПУ"].Points[1].Label = res2[1].ToString();
-            chart1.Series["ЗПУ"].Points[2].Label = res2[2].ToString();
+            chart1.Series["НУ Запорізька політехніка"].Points[0].Label = res2[0].ToString();
+            chart1.Series["НУ Запорізька політехніка"].Points[1].Label = res2[1].ToString();
+            chart1.Series["НУ Запорізька політехніка"].Points[2].Label = res2[2].ToString();
             chart1.ResetAutoValues();
         }
 
@@ -345,6 +345,23 @@ namespace Cursash2
             {
                 System.Text.Json.JsonSerializer.SerializeAsync<List<Result>>(fs, its);
             }
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void якКористуватисьПрограмоюToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.Show();
+        }
+
+        private void проРозробниківToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form3 form3 = new Form3();
+            form3.Show();
         }
     }
 
